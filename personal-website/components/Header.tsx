@@ -34,35 +34,35 @@ const Header = () => {
 
         {/* Right: Socials + Resume */}
         <div className="flex items-center gap-4 flex-wrap">
-          <a
+          <Link
             href="https://github.com/amrita-arun"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-black transition"
           >
             <Github className="w-5 h-5" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://linkedin.com/in/amrita-arun"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-600 hover:text-blue-700 transition"
           >
             <Linkedin className="w-5 h-5" />
-          </a>
-          <a
+          </Link>
+          <Link
             href="mailto:your@email.com"
             className="text-gray-600 hover:text-pink-600 transition"
           >
             <Mail className="w-5 h-5" />
-          </a>
+          </Link>
 
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm" className="hover:bg-pink-500 hover:text-white transition-all">
                 <FileText className="mr-2 h-4 w-4" />
                 Resume
             </Button>
-        </a>
+        </Link>
 
         </div>
 

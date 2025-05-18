@@ -1,7 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-import { Briefcase, ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 
