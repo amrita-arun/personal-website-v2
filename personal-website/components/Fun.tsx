@@ -7,7 +7,7 @@ const hobbies = [
   {
     title: 'Drawing',
     icon: <PencilRuler className="w-6 h-6 text-pink-500" />,
-    description: "I love creating digital art, and occasionally swap out my iPad with a regular pencil, paper, watercolors, and colored pencils as well!",
+    description: "I love creating digital art, and occasionally swap out my iPad for a regular pencil, paper, and watercolors as well!",
   },
   {
     title: 'Electric Guitar',

@@ -27,14 +27,14 @@ const Projects = () => {
         />
         <ProjectCard
           title="Clique"
-          description="A brief description of your second project. What technologies did you use? What problems did it solve?"
+          description="A minimalist social app that helps small, long-distance friend groups stay connected by sharing weekly photo dumps in an intuitive feed."
           tech={['Swift', 'Firebase']}
           codeLink="https://github.com/amrita-arun/CliqueSwift"
           demoLink=""
         />
         <ProjectCard
           title="Code Comparison Tool"
-          description="A brief description of your third project. What technologies did you use? What problems did it solve?"
+          description="A web application for students to easily identify unauthorized Python code usage by highlighting methods or functions in their code that do not align with provided class materials."
           tech={['Python', 'React', 'Next.js']}
           codeLink="https://github.com/amrita-arun/CodeComparison"
           demoLink="https://code-comparison.vercel.app/"
