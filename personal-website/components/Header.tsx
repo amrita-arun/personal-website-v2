@@ -11,7 +11,7 @@ const Header = () => {
 
         {/* Left: Name */}
         <div className="font-bold text-lg text-gray-800">
-          <a href="/" className="hover:text-pink-500 transition-colors">Amrita Arun</a>
+          <Link href="/" className="hover:text-pink-500 transition-colors">Amrita Arun</Link>
         </div>
 
         {/* Center: Navigation Links */}

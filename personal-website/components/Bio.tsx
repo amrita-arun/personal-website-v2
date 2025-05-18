@@ -14,10 +14,10 @@ const Bio = () => {
       {/* Text content */}
       <div className="text-left space-y-6 max-w-xl">
       <h1 className="text-5xl font-extrabold tracking-tight text-gray-900">
-        Hi, I'm <span className="text-black">Amrita</span>
+        Hi, I&apos;m <span className="text-black">Amrita</span>
         </h1>
         <h2 className="text-gray-500 text-xl font-medium">
-        I'm a sophomore at the University of Southern California majoring in Computer Science. 
+        I&apos;m a sophomore at the University of Southern California majoring in Computer Science. 
         </h2>
 
         <p className="text-gray-600">

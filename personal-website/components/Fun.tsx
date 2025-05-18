@@ -17,12 +17,12 @@ const hobbies = [
   {
     title: 'Indian Classical Music',
     icon: <Sparkles className="w-6 h-6 text-purple-500" />,
-    description: 'I’ve been trained in Carnatic vocal music since I was eight years old. It\'s been a stable way of connecting me with my culture, no matter where I go.',
+    description: 'I&apos;ve been trained in Carnatic vocal music since I was eight years old. It&apos;s been a stable way of connecting me with my culture, no matter where I go.',
   },
   {
     title: 'Piano',
     icon: <Music className="w-6 h-6 text-blue-500" />,
-    description: 'A childhood love I’m revisiting - I mostly play whatever strikes my curiosity in the moment. I\'ve recently finished up Arabesque by Debussy.',
+    description: 'A childhood love I&apos;m revisiting - I mostly play whatever strikes my curiosity in the moment. I&apos;ve recently finished up Arabesque by Debussy.',
   },
 ]
 
@@ -32,7 +32,7 @@ const Fun = () => {
       <div className="text-center mb-10">
         <h2 className="text-4xl font-extrabold">Just for Fun</h2>
         <p className="mt-2 text-gray-500 max-w-xl mx-auto text-sm">
-          Each year of my life I dedicate to learning something new. Here are some of the hobbies I've picked up over the years.
+          Each year of my life I dedicate to learning something new. Here are some of the hobbies I&apos;ve picked up over the years.
         </p>
       </div>
 
