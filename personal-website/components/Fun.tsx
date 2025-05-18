@@ -7,22 +7,22 @@ const hobbies = [
   {
     title: 'Drawing',
     icon: <PencilRuler className="w-6 h-6 text-pink-500" />,
-    description: 'I love creating digital art, and occasionally swap out my iPad with a regular pencil, paper, watercolors, and colored pencils as well!',
+    description: "I love creating digital art, and occasionally swap out my iPad with a regular pencil, paper, watercolors, and colored pencils as well!",
   },
   {
     title: 'Electric Guitar',
     icon: <Guitar className="w-6 h-6 text-yellow-500" />,
-    description: 'I started teaching myself the guitar in senior year of high school. I like learning iconic guitar solos, as well as the classic Taylor Swift and Coldplay!',
+    description: "I started teaching myself the guitar in senior year of high school. I like learning iconic guitar solos, as well as the classic Taylor Swift and Coldplay!",
   },
   {
     title: 'Indian Classical Music',
     icon: <Sparkles className="w-6 h-6 text-purple-500" />,
-    description: 'I&apos;ve been trained in Carnatic vocal music since I was eight years old. It&apos;s been a stable way of connecting me with my culture, no matter where I go.',
+    description: "I've been trained in Carnatic vocal music since I was eight years old. It's been a stable way of connecting me with my culture, no matter where I go.",
   },
   {
     title: 'Piano',
     icon: <Music className="w-6 h-6 text-blue-500" />,
-    description: 'A childhood love I&apos;m revisiting - I mostly play whatever strikes my curiosity in the moment. I&apos;ve recently finished up Arabesque by Debussy.',
+    description: "A childhood love I'm revisiting - I mostly play whatever strikes my curiosity in the moment. I've recently finished up Arabesque by Debussy.",
   },
 ]
 

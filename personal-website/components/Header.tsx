@@ -38,7 +38,7 @@ const Header = () => {
             href="https://github.com/amrita-arun"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-black transition"
+            className="text-gray-600 hover:text-pink-600 transition"
           >
             <Github className="w-5 h-5" />
           </Link>
@@ -46,7 +46,7 @@ const Header = () => {
             href="https://linkedin.com/in/amrita-arun"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-600 hover:text-blue-700 transition"
+            className="text-gray-600 hover:text-pink-600 transition"
           >
             <Linkedin className="w-5 h-5" />
           </Link>
