@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
-import { Mail, FileText, Github, Linkedin, MailIcon } from 'lucide-react'
+import { Mail, Github, Linkedin, MailIcon } from 'lucide-react'
+// import { FileText } from 'lucide-react'
 import Link from 'next/link'
 
 const Bio = () => {

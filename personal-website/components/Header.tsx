@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { FileText, Github, Linkedin, Mail } from 'lucide-react'
+// import { Button } from '@/components/ui/button'
+import { Github, Linkedin, Mail } from 'lucide-react'
+// import { FileText, Github, Linkedin, Mail } from 'lucide-react'
 
 const Header = () => {
   return (
