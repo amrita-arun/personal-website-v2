@@ -12,7 +12,25 @@ const orgs = [
       {
         title: 'SWE and Growth Intern',
         dates: 'Jan 2025 → Present',
-        description: 'Implemented LTI 1.3 integration to support automatic user authentication and contextual launches from LMS platforms (e.g., Moodle), removing the need for manual login and enabling dynamic personalization in the frontend.'
+        description: 'Architected and implemented a Dockerized in-browser terminal to execute python homework submissions.' +
+        ' Automated image publishing to Amazon ECR, and on-demand ECS Fargate tasks to pull student submissions from S3, enabling distributed system-level sandboxing for code evaluation.' +
+        '\n\nLaunched a 50+ participant pilot by conducting product demos and organic outreach to educators, accelerating adoption across K–12 and higher ed.'
+      },
+    ],
+  },
+  {
+    org: 'LavaLab at USC',
+    url: 'https://usclavalab.org/',
+    roles: [
+      {
+        title: 'Director of External Community',
+        dates: 'July 2025 → Present',
+        description: 'Making LavaLab a place that alumni continue to come back to.'
+      },
+      {
+        title: 'Co-Founder and Developer',
+        dates: 'Aug 2024 → Dec 2024',
+        description: 'Selected as 1 of 14 developers out of 350+ applicants in USC\'s premier startup incubator. Worked with a fellow co-developer, designer, and PM to bring our startup to life.'
       },
     ],
   },
@@ -30,17 +48,6 @@ const orgs = [
         dates: 'Sep 2024 → Present',
         description: 'Currently building a productivity app to track what you have done, not what you need to do.'
       }
-    ],
-  },
-  {
-    org: 'LavaLab at USC',
-    url: 'https://usclavalab.org/',
-    roles: [
-      {
-        title: 'Co-Founder and Developer',
-        dates: 'Aug 2024 → Dec 2024',
-        description: 'Selected as 1 of 14 developers out of 350+ applicants in USC\'s premier startup incubator. Worked with a fellow co-developer, designer, and PM to bring Due to life.'
-      },
     ],
   },
 ]
@@ -104,10 +111,10 @@ const Experiences = () => {
 
                       <div
                         className={`mt-1 overflow-hidden transition-all duration-300 ease-in-out ${
-                          isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+                          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                       >
-                        <p className="text-gray-600 leading-relaxed">{description}</p>
+                        <p className="text-gray-600 leading-relaxed whitespace-pre-line">{description}</p>
                       </div>
                     </div>
                   )
