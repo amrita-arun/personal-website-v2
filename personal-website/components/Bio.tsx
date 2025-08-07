@@ -30,13 +30,13 @@ const Bio = () => {
             <Mail className="mr-2 h-4 w-4" />
             <Link href="mailto:asarun@usc.edu">Contact Me</Link>
           </Button>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          {/* <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
 
             <Button variant="outline" size="lg">
                 <FileText className="mr-2 h-4 w-4" />
                 View Resume
             </Button>
-            </a>
+            </a> */}
         </div>
 
         {/* Social Icons */}

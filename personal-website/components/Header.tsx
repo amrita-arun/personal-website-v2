@@ -57,12 +57,12 @@ const Header = () => {
             <Mail className="w-5 h-5" />
           </Link>
 
-          <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          {/* <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm" className="hover:bg-pink-500 hover:text-white transition-all">
                 <FileText className="mr-2 h-4 w-4" />
                 Resume
             </Button>
-        </Link>
+        </Link> */}
 
         </div>
 
