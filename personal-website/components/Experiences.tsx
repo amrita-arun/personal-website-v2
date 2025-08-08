@@ -14,7 +14,7 @@ const orgs = [
         dates: 'Jan 2025 → Present',
         description: 'Architected and implemented a Dockerized in-browser terminal to execute python homework submissions.' +
         ' Automated image publishing to Amazon ECR, and on-demand ECS Fargate tasks to pull student submissions from S3, enabling distributed system-level sandboxing for code evaluation.' +
-        '\n\nLaunched a 50+ participant pilot by conducting product demos and organic outreach to educators, accelerating adoption across K–12 and higher ed.'
+        '\n\nLaunched a 50+ participant pilot by conducting product demos and organic outreach to educators, including teachers from USC, UCLA, UCI, etc. accelerating adoption across K–12 and higher ed.'
       },
     ],
   },
