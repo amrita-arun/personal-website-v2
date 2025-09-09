@@ -10,7 +10,7 @@ type ProjectCardProps = {
   tech: string[]
   codeLink?: string
   demoLink?: string
-  imageSrc?: string
+  imageSrc: string
 }
 
 const ProjectCard = ({ title, description, tech, codeLink, demoLink, imageSrc }: ProjectCardProps) => {
@@ -23,13 +23,13 @@ const ProjectCard = ({ title, description, tech, codeLink, demoLink, imageSrc }:
       className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col justify-between border p-4 w-full max-w-sm"
     >
       <div className="w-full h-40 bg-gray-100 rounded-md overflow-hidden mb-4">
-        {imageSrc ? (
+        {<Image src={imageSrc} alt={title} width={400} height={160} className="w-full h-full object-cover" />/*imageSrc ? (
           <Image src={imageSrc} alt={title} width={400} height={160} className="w-full h-full object-cover" />
         ) : (
           <div className="w-full h-full flex items-center justify-center text-gray-400 text-sm">
             Coming soon!
           </div>
-        )}
+        )*/}
       </div>
 
       <h3 className="text-lg font-semibold text-gray-900">{title}</h3>

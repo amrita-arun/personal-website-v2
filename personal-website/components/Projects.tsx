@@ -31,6 +31,7 @@ const Projects = () => {
           tech={['Swift', 'Firebase']}
           codeLink="https://github.com/amrita-arun/CliqueSwift"
           demoLink=""
+          imageSrc='/clique.png'
         />
         <ProjectCard
           title="Code Comparison Tool"
