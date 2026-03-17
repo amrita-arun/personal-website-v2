@@ -20,14 +20,14 @@ const projects = [
         icon: (
           <Github className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200" />
         ),
-        href: "#",
+        href: "https://github.com/amrita-arun/SwiftMotionKit",
       },
       {
         label: "Read more",
         icon: (
           <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
         ),
-        href: "#",
+        href: "/work",
       },
     ],
   },
@@ -45,7 +45,7 @@ const projects = [
         icon: (
           <Github className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200" />
         ),
-        href: "#",
+        href: "https://github.com/amrita-arun/wardrobe",
       },
       {
         label: "App Store",
@@ -59,7 +59,7 @@ const projects = [
         icon: (
           <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
         ),
-        href: "#",
+        href: "/work",
       },
     ],
   },
@@ -77,14 +77,14 @@ const projects = [
         icon: (
           <Github className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200" />
         ),
-        href: "#",
+        href: "https://github.com/kristiiwuu/mvp",
       },
       {
         label: "Read more",
         icon: (
           <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
         ),
-        href: "#",
+        href: "/work",
       },
     ],
   },

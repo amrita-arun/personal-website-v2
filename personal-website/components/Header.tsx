@@ -49,7 +49,7 @@ const Header = () => {
             <Linkedin className="h-5 w-5" />
           </Link>
           <Link
-            href="https://twitter.com"
+            href="https://x.com/amrita__arun"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Twitter"

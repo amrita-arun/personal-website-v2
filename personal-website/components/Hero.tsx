@@ -49,7 +49,7 @@ export function Hero() {
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="https://twitter.com"
+              href="https://x.com/amrita__arun"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
