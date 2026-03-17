@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Chip } from '@/components/ui/chip';
 
