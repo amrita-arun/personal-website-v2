@@ -11,7 +11,7 @@ export function Footer() {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.4, ease: 'easeOut' }}
     >
-      <div className="mx-auto flex w-[1134px] flex-col gap-4 px-6 py-10 md:flex-row md:items-center md:justify-between">
+      <div className="mx-auto flex w-full max-w-[1134px] flex-col gap-4 px-4 py-10 md:flex-row md:items-center md:justify-between">
         <div className="space-y-1">
           <p className="font-display text-[20px] leading-[30px] tracking-[-0.4px]">
             Let&apos;s build something together!

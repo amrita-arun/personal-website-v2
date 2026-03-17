@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <motion.section
       id="hero"
-      className="mx-auto mt-[192px] flex w-[1320px] flex-col gap-6 px-6 pb-16 md:flex-row md:items-start md:justify-center"
+      className="mx-auto mt-[192px] flex w-full max-w-[1320px] flex-col gap-6 px-4 pb-16 md:flex-row md:items-start md:justify-center"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.6 }}

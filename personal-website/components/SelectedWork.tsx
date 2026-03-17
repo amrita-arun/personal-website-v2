@@ -94,7 +94,7 @@ export function SelectedWork() {
   return (
     <motion.section
       id="selected-work"
-      className="mx-auto mt-[124px] w-[1134px] px-6 pb-14"
+      className="mx-auto mt-[124px] w-full max-w-[1134px] px-4 pb-14"
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}

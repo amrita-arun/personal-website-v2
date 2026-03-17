@@ -77,7 +77,7 @@ const Experiences = () => {
   return (
     <motion.section
       id="experience"
-      className="mx-auto mt-[96px] w-[1144px] border-t border-black/10 px-6 pb-20 pt-10"
+      className="mx-auto mt-[96px] w-full max-w-[1144px] border-t border-black/10 px-4 pb-20 pt-10"
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}

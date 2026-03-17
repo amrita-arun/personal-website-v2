@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <SectionNav />
-      <main className="pb-24 md:pl-24">
+      <main className="pb-24 pl-4 pr-4 md:pl-24 md:pr-8">
         <Hero />
         <SelectedWork />
         <About />

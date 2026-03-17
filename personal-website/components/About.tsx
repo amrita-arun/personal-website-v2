@@ -37,7 +37,7 @@ export function About() {
   return (
     <motion.section
       id="about"
-      className="mx-auto w-[1138px] px-6 pb-16 pt-10 border-t border-black/10"
+      className="mx-auto w-full max-w-[1138px] px-4 pb-16 pt-10 border-t border-black/10"
       initial={{ opacity: 0, y: 32 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.4 }}
