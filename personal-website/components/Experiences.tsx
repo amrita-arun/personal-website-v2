@@ -37,7 +37,7 @@ const orgs = [
         title: 'Director of External Community',
         dates: 'July 2025 → Present',
         description:
-          'Architected and implemented a Dockerized in-browser terminal to execute python homework submissions. Automated image publishing to Amazon ECR, and on-demand ECS Fargate tasks to pull student submissions from S3, enabling distributed system-level sandboxing for code evaluation.',
+          'Building a home for LavaLab alumni to come back to!',
       },
       {
         title: 'Co-Founder and Developer',
