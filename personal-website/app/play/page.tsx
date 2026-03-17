@@ -1,0 +1,15 @@
+import Header from '@/components/Header';
+
+export default function PlayPage() {
+  return (
+    <>
+      <Header />
+      <main className="mx-auto max-w-[1134px] px-6 py-16">
+        <h1 className="font-display text-3xl">Play</h1>
+        <p className="mt-4 font-sans text-[18px] text-[#6F6F6F]">
+          Digital art, watercolor, mehendi &mdash; coming soon.
+        </p>
+      </main>
+    </>
+  );
+}

@@ -1,21 +1,23 @@
-import Header from '@/components/Header'
-import Bio from '@/components/Bio'
-import Projects from '@/components/Projects'
-import Experiences from '@/components/Experiences'
-import Fun from '@/components/Fun'
-import CursorGlow from '@/components/CursorGlow'
-
-
+import Header from '@/components/Header';
+import { Hero } from '@/components/Hero';
+import { SelectedWork } from '@/components/SelectedWork';
+import { About } from '@/components/About';
+import Experiences from '@/components/Experiences';
+import { Footer } from '@/components/Footer';
+import { SectionNav } from '@/components/SectionNav';
 
 export default function Home() {
   return (
     <>
       <Header />
-      <Bio />
-      <Projects />
-      <Experiences />
-      <Fun />
-      <CursorGlow />
+      <SectionNav />
+      <main className="pb-24 md:pl-24">
+        <Hero />
+        <SelectedWork />
+        <About />
+        <Experiences />
+      </main>
+      <Footer />
     </>
-  )
+  );
 }
