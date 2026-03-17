@@ -37,8 +37,8 @@ const projects = [
     description:
       "Outfit recommendations with weather-aware styling and carousel-driven interactions.",
     tech: ["SwiftUI", "Swift", "iOS", "Firebase", "Real-Time Scoring"],
-    mediaSrc: undefined,
-    mediaAlt: undefined,
+    mediaSrc: "/WardrobeHome.png",
+    mediaAlt: "Wardrobe home screen",
     actions: [
       {
         label: "Code",
@@ -162,7 +162,7 @@ export function SelectedWork() {
                   width={900}
                   height={540}
                   className={`h-auto w-full rounded-[10px] border border-black/15 bg-black/5 object-contain ${
-                    project.title === "SwiftMotionKit"
+                    project.title === "SwiftMotionKit" || project.title === "Wardrobe"
                       ? "max-w-[220px]"
                       : project.title === "Due"
                       ? "max-w-[520px]"
