@@ -37,7 +37,7 @@ const projects = [
     description:
       "Outfit recommendations with weather-aware styling and carousel-driven interactions.",
     tech: ["SwiftUI", "Swift", "iOS", "Firebase", "Real-Time Scoring"],
-    mediaSrc: "/WardrobeHome.png",
+    mediaSrc: "/Home - Like.png",
     mediaAlt: "Wardrobe home screen",
     actions: [
       {
