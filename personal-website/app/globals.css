@@ -119,8 +119,10 @@
   body {
     @apply bg-background text-foreground;
     background-image:
+    /*
       linear-gradient(to right, oklch(0.92 0 0 / 0.4) 1px, transparent 1px),
       linear-gradient(to bottom, oklch(0.92 0 0 / 0.4) 1px, transparent 1px);
+      */ none;
     background-size: 24px 24px;
     background-attachment: fixed;
   }

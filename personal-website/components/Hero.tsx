@@ -2,10 +2,20 @@
 
 import Image from 'next/image';
 import { Github, Linkedin, Twitter } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { Chip } from '@/components/ui/chip';
+import { getRevealStaggerVariants, getRevealUpVariants } from '@/components/animations';
 
 export function Hero() {
+  const reducedMotion = useReducedMotion() ?? false;
+
+  const revealUp = getRevealUpVariants({ reducedMotion });
+  const revealStagger = getRevealStaggerVariants({
+    reducedMotion,
+    staggerChildren: 0.08,
+    delayChildren: 0.03,
+  });
+
   return (
     <motion.section
       id="hero"
@@ -15,22 +25,31 @@ export function Hero() {
       viewport={{ once: true, amount: 0.6 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
     >
-      <div className="flex-1 space-y-6 max-w-[760px] md:ml-24">
-        <p className="font-sans text-[14px]">
+      <motion.div
+        className="flex-1 space-y-6 max-w-[760px] md:ml-24"
+        variants={revealStagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.35 }}
+      >
+        <motion.p variants={revealUp} className="font-sans text-[14px]">
           IOS ENGINEER · INTERACTION DESIGN
-        </p>
-        <h1 className="font-sans text-[40px] leading-normal">
+        </motion.p>
+        <motion.h1 variants={revealUp} className="font-sans text-[40px] leading-normal">
           Hi!{' '}
           <span className="font-display italic">I&apos;m Amrita.</span>
           <br></br>I build interfaces{' '}
           <span className="font-display italic">that feel alive.</span>
-        </h1>
-        <p className="max-w-[760px] font-sans text-[18px] leading-relaxed">
+        </motion.h1>
+        <motion.p
+          variants={revealUp}
+          className="max-w-[760px] font-sans text-[18px] leading-relaxed"
+        >
           I care about the felt experience of mobile app development. The
           physics, the feedback, and the transitions that make an app feel like
           a tangible piece of art.
-        </p>
-        <div className="flex flex-wrap items-center gap-4">
+        </motion.p>
+        <motion.div variants={revealUp} className="flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-3">
             <a
               href="https://github.com/amrita-arun"
@@ -66,10 +85,16 @@ export function Hero() {
             Contact Me
           </Chip>
 
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="flex w-full justify-end md:w-[280px] md:justify-end md:ml-6 md:mr-[93px]">
+      <motion.div
+        className="flex w-full justify-end md:w-[280px] md:justify-end md:ml-6 md:mr-[93px]"
+        variants={revealUp}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.35 }}
+      >
         <div className="relative h-[260px] w-[260px] overflow-hidden rounded-[25px] border border-black bg-[#d3d3d3]">
           <Image
             src="/funHeadshot copy.JPG"
@@ -78,7 +103,7 @@ export function Hero() {
             className="object-cover"
           />
         </div>
-      </div>
+      </motion.div>
     </motion.section>
   );
 }

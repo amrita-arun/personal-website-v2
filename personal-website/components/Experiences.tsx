@@ -1,8 +1,9 @@
 'use client';
 
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { useState } from 'react';
+import { getRevealStaggerVariants, getRevealUpVariants } from '@/components/animations';
 
 const orgs = [
   {
@@ -69,6 +70,16 @@ const orgs = [
 
 const Experiences = () => {
   const [open, setOpen] = useState<Record<string, boolean>>({});
+  const reducedMotion = useReducedMotion() ?? false;
+
+  const revealUp = getRevealUpVariants({ reducedMotion, y: 18, duration: 0.4 });
+  const rolesStagger = getRevealStaggerVariants({
+    reducedMotion,
+    y: 0,
+    duration: 0.35,
+    staggerChildren: 0.05,
+    delayChildren: 0.03,
+  });
 
   const toggle = (key: string) => {
     setOpen((prev) => ({ ...prev, [key]: !prev[key] }));
@@ -111,13 +122,23 @@ const Experiences = () => {
                   </a>
                 </div>
 
-                <div className="space-y-4 pt-2">
+                <motion.div
+                  className="space-y-4 pt-2"
+                  variants={rolesStagger}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.35 }}
+                >
                   {org.roles.map((role) => {
                     const key = `${org.org}-${role.title}`;
                     const isOpen = open[key] ?? false;
 
                     return (
-                      <div key={key} className="space-y-1">
+                      <motion.div
+                        key={key}
+                        className="space-y-1"
+                        variants={revealUp}
+                      >
                         <button
                           onClick={() => toggle(key)}
                           className="flex w-full items-center justify-between gap-3 text-left"
@@ -149,16 +170,19 @@ const Experiences = () => {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2, ease: 'easeOut' }}
+                              transition={{
+                                duration: reducedMotion ? 0.01 : 0.2,
+                                ease: 'easeOut',
+                              }}
                             >
                               {role.description}
                             </motion.p>
                           )}
                         </AnimatePresence>
-                      </div>
+                      </motion.div>
                     );
                   })}
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}

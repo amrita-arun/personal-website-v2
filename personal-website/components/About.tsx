@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 // import Image from "next/image"; // uncomment when you add the fan images back
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Chip } from "@/components/ui/chip";
+import { getRevealStaggerVariants, getRevealUpVariants } from "@/components/animations";
 
 /* When you have 7 images, uncomment this block and the fan section below. Add paths (files in /public).
 const fanImages = [
@@ -34,6 +35,17 @@ const badges = [
 ];
 
 export function About() {
+  const reducedMotion = useReducedMotion() ?? false;
+
+  const revealUp = getRevealUpVariants({ reducedMotion, y: 20, duration: 0.45 });
+  const revealStagger = getRevealStaggerVariants({
+    reducedMotion,
+    y: 0,
+    duration: 0.5,
+    staggerChildren: 0.08,
+    delayChildren: 0.03,
+  });
+
   return (
     <motion.section
       id="about"
@@ -45,14 +57,20 @@ export function About() {
     >
       <h2 className="mb-6 font-sans text-[18px] underline">ABOUT</h2>
 
-      <div className="space-y-8">
-        <p className="font-sans text-[18px] leading-relaxed">
+      <motion.div
+        className="space-y-8"
+        variants={revealStagger}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.35 }}
+      >
+        <motion.p variants={revealUp} className="font-sans text-[18px] leading-relaxed">
           I&apos;m a CS student at USC with a background in art and design.
           I&apos;m drawn to the edges of engineering - where technical precision
           and sensory experience meet.
-        </p>
+        </motion.p>
 
-        <p className="font-sans text-[18px] leading-relaxed">
+        <motion.p variants={revealUp} className="font-sans text-[18px] leading-relaxed">
           I&apos;ve been doing art my entire life. I&apos;ve been learning
           Carnatic music and piano since age 8, and explored{" "}
           <Link
@@ -69,26 +87,27 @@ export function About() {
             mehendi
           </Link>
           .
-        </p>
+        </motion.p>
 
-        <p className="font-sans text-[18px] leading-relaxed">
+        <motion.p variants={revealUp} className="font-sans text-[18px] leading-relaxed">
           Beyond mobile app development, I have extensive experience in backend
           development (Java/Springboot), as well as full-stack development
           across various tech stacks (Next.js + Supabase, Firebase). I enjoy
           leveraging AI tools in my work (Cursor, V0, Claude Code, Figma Make).
-        </p>
+        </motion.p>
 
-        <div className="flex flex-wrap gap-2">
+        <motion.div variants={revealUp} className="flex flex-wrap gap-2">
           {badges.map((text) => (
-            <Chip
-              key={text}
-              variant="outline"
-              className="text-[14px] leading-[21px] tracking-[-0.28px]"
-            >
-              {text}
-            </Chip>
+            <motion.div key={text} variants={revealUp}>
+              <Chip
+                variant="outline"
+                className="text-[14px] leading-[21px] tracking-[-0.28px]"
+              >
+                {text}
+              </Chip>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         {/* Image fan – uncomment when you have 7 images and have uncommented fanImages/fanTransforms and the Image import above
         <div className="flex items-end justify-center">
@@ -116,7 +135,7 @@ export function About() {
           </motion.div>
         </div>
         */}
-      </div>
+      </motion.div>
     </motion.section>
   );
 }
