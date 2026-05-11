@@ -116,8 +116,13 @@ export function Chip(props: BaseProps) {
   );
 
   if (href) {
+    const external = /^https?:\/\//i.test(href);
     return (
-      <Link href={href} className="inline-block">
+      <Link
+        href={href}
+        className="inline-block"
+        {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      >
         {content}
       </Link>
     );

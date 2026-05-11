@@ -45,9 +45,7 @@ export function Hero() {
           variants={revealUp}
           className="max-w-[760px] font-sans text-[18px] leading-relaxed"
         >
-          I care about the felt experience of mobile app development. The
-          physics, the feedback, and the transitions that make an app feel like
-          a tangible piece of art.
+          I care about the felt experience of mobile app development.
         </motion.p>
         <motion.div variants={revealUp} className="flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-3">

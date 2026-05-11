@@ -8,7 +8,28 @@ import { getRevealStaggerVariants, getRevealUpVariants } from "@/components/anim
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 
+/** Replace with your Verso Devpost submission URL (full `https://devpost.com/...` link). */
+const VERSO_DEVPOST_URL = "https://devpost.com/software/verso-ctf4e9";
+
 const projects = [
+  {
+    kind: "UI/UX · DESIGNATHON",
+    title: "Verso",
+    description:
+      "A reading experience designed for synthesis, not completion—spatial library, annotation-first reading, and insights that evolve with you (Figma Make prototype).",
+    tech: ["CreateSC '26", "3rd Place","Figma Make", "Interaction Design", "UI/UX"],
+    mediaSrc: "/library.png",
+    mediaAlt: "Verso product exploration preview",
+    actions: [
+      {
+        label: "Devpost",
+        icon: (
+          <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
+        ),
+        href: VERSO_DEVPOST_URL,
+      },
+    ],
+  },
   {
     kind: "SWIFT PACKAGE · OPEN SOURCE",
     title: "SwiftMotionKit",
@@ -25,13 +46,6 @@ const projects = [
         ),
         href: "https://github.com/amrita-arun/SwiftMotionKit",
       },
-      {
-        label: "Read more",
-        icon: (
-          <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
-        ),
-        href: "/work",
-      },
     ],
   },
   {
@@ -40,7 +54,7 @@ const projects = [
     description:
       "Outfit recommendations with weather-aware styling and carousel-driven interactions.",
     tech: ["SwiftUI", "Swift", "iOS", "Firebase", "Real-Time Scoring"],
-    mediaSrc: "/Home - Like.png",
+    mediaSrc: "/WardrobeHome2.png",
     mediaAlt: "Wardrobe home screen",
     actions: [
       {
@@ -50,6 +64,7 @@ const projects = [
         ),
         href: "https://github.com/amrita-arun/wardrobe",
       },
+      /*
       {
         label: "App Store",
         icon: (
@@ -57,13 +72,7 @@ const projects = [
         ),
         href: "#",
       },
-      {
-        label: "Read more",
-        icon: (
-          <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
-        ),
-        href: "/work",
-      },
+      */
     ],
   },
   {
@@ -81,13 +90,6 @@ const projects = [
           <Github className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200" />
         ),
         href: "https://github.com/kristiiwuu/mvp",
-      },
-      {
-        label: "Read more",
-        icon: (
-          <ArrowUpRight className="h-3 w-3 text-black group-hover:text-white transition-colors duration-200 group-hover:-translate-y-0.5 group-hover:-rotate-12" />
-        ),
-        href: "/work",
       },
     ],
   },
@@ -201,18 +203,20 @@ export function SelectedWork() {
                 ))}
               </motion.div>
 
-              <motion.div variants={revealUp} className="flex flex-wrap gap-2">
-                {project.actions.map((action) => (
-                  <Chip
-                    key={action.label}
-                    href={action.href}
-                    styleType="action"
-                    iconLeft={action.icon}
-                  >
-                    {action.label}
-                  </Chip>
-                ))}
-              </motion.div>
+              {project.actions.length > 0 ? (
+                <motion.div variants={revealUp} className="flex flex-wrap gap-2">
+                  {project.actions.map((action) => (
+                    <Chip
+                      key={action.label}
+                      href={action.href}
+                      styleType="action"
+                      iconLeft={action.icon}
+                    >
+                      {action.label}
+                    </Chip>
+                  ))}
+                </motion.div>
+              ) : null}
             </motion.div>
 
             {/** media column **/}
@@ -224,7 +228,6 @@ export function SelectedWork() {
                 <SpotlightMedia
                   src={project.mediaSrc}
                   alt={project.mediaAlt ?? ""}
-                  title={project.title}
                   enableSpotlight={enableSpotlight}
                 />
               )}
@@ -243,24 +246,17 @@ export function SelectedWork() {
 type SpotlightMediaProps = {
   src: string;
   alt: string;
-  title: string;
   enableSpotlight: boolean;
 };
 
-function SpotlightMedia({ src, alt, title, enableSpotlight }: SpotlightMediaProps) {
+/** Uniform preview tile: same max width + 4:3 frame, content letterboxed with object-contain. */
+function SpotlightMedia({ src, alt, enableSpotlight }: SpotlightMediaProps) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const rafRef = useRef<number | null>(null);
 
   const ringSizePx = 14;
   const proximityPx = 300;
   const hitPaddingPx = proximityPx + ringSizePx;
-
-  const maxW =
-    title === "SwiftMotionKit" || title === "Wardrobe"
-      ? "max-w-[220px]"
-      : title === "Due"
-      ? "max-w-[520px]"
-      : "max-w-[320px]";
 
   const initialSpotStyle: CSSProperties & Record<string, string> = {
     "--ring-o": "0",
@@ -312,37 +308,44 @@ function SpotlightMedia({ src, alt, title, enableSpotlight }: SpotlightMediaProp
 
   return (
     <div
-      ref={wrapperRef}
-      className={`group relative overflow-visible rounded-[10px] border border-black/15 bg-black/5 ${maxW}`}
+      className="group relative w-full max-w-[min(100%,400px)] min-w-0 md:max-w-[420px]"
       style={initialSpotStyle}
     >
       <div
-        className="pointer-events-none absolute inset-0 rounded-[10px] transition-opacity duration-200"
-        style={
-          {
-            boxShadow:
-              "0 0 0 1px rgba(183,156,255,calc(var(--ring-o) * 0.55)), 0 0 44px 14px rgba(183,156,255,calc(var(--ring-o) * 0.45))",
-            filter: "blur(0.2px)",
-          } as CSSProperties
-        }
-      />
+        ref={wrapperRef}
+        className="relative aspect-[4/3] w-full overflow-hidden rounded-[10px]"
+      >
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] rounded-[10px] transition-opacity duration-200"
+          style={
+            {
+              boxShadow:
+                "0 0 0 1px rgba(183,156,255,calc(var(--ring-o) * 0.55)), 0 0 44px 14px rgba(183,156,255,calc(var(--ring-o) * 0.45))",
+              filter: "blur(0.2px)",
+            } as CSSProperties
+          }
+        />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 420px"
+          className="object-contain object-center"
+        />
+      </div>
       {/* Invisible hit area so the glow can activate before the cursor is directly on the tile */}
       <div
         aria-hidden
         className="absolute z-10 bg-transparent"
         style={{
-          inset: `-${hitPaddingPx}px`,
+          top: -hitPaddingPx,
+          left: -hitPaddingPx,
+          right: -hitPaddingPx,
+          bottom: -hitPaddingPx,
           borderRadius: 10,
         }}
         onPointerMove={enableSpotlight ? handlePointerMove : undefined}
         onPointerLeave={enableSpotlight ? handlePointerLeave : undefined}
-      />
-      <Image
-        src={src}
-        alt={alt}
-        width={900}
-        height={540}
-        className="h-auto w-full object-contain"
       />
     </div>
   );
