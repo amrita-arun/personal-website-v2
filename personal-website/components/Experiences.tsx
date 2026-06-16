@@ -6,6 +6,17 @@ import { motion } from 'framer-motion'
 
 const orgs = [
   {
+    org: 'Tradeweb',
+    url: 'https://www.tradeweb.com/',
+    roles: [
+      {
+        title: 'Incoming Fullstack SWE Intern',
+        dates: 'June 2026 → Aug 2026',
+        description: 'Incoming SWE Intern on Tradeweb\'s institutional team. Developing in Java/SpringBoot/React.js.',
+      },
+    ],
+  },
+  {
     org: 'Supaclass',
     url: 'https://www.supaclass.ai/',
     roles: [
@@ -52,8 +63,14 @@ const orgs = [
   },
 ]
 
-const Experiences = () => {
+type ExperiencesProps = {
+  variant?: 'default' | 'about'
+  showHeading?: boolean
+}
+
+const Experiences = ({ variant = 'default', showHeading = true }: ExperiencesProps) => {
   const [openIndexes, setOpenIndexes] = useState<Record<string, boolean>>({})
+  const isAbout = variant === 'about'
 
   const toggle = (key: string) => {
     setOpenIndexes((prev) => ({
@@ -63,25 +80,61 @@ const Experiences = () => {
   }
 
   return (
-    <section id="experience" className="max-w-7xl mx-auto px-6 py-20">
-      <h2 className="text-4xl font-extrabold mb-10">Experience</h2>
+    <section
+      id="experience"
+      className={
+        isAbout ? 'w-full' : 'max-w-7xl mx-auto px-6 py-20'
+      }
+    >
+      {showHeading && (
+        <h2
+          className={
+            isAbout
+              ? 'font-sans text-[16px] font-medium text-[#8E8E8E]'
+              : 'mb-10 text-4xl font-extrabold'
+          }
+        >
+          {isAbout ? 'my experience....' : 'Experience'}
+        </h2>
+      )}
 
-      <div className="mb-24">
-        <div className="space-y-12 relative border-l border-pink-200 pl-8">
+      <div className={isAbout ? 'mt-6' : 'mb-24'}>
+        <div
+          className={
+            isAbout
+              ? 'relative space-y-8 border-l border-[#D6D6D6] pl-6'
+              : 'relative space-y-12 border-l border-pink-200 pl-8'
+          }
+        >
           {orgs.map(({ org, url, roles }, index) => (
             <motion.div
               key={org}
-              className="relative pl-4"
+              className={isAbout ? 'relative pl-3' : 'relative pl-4'}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
             >
-              <span className="absolute -left-[1.1rem] top-2 h-2 w-2 rounded-full bg-pink-500" />
+              <span
+                className={
+                  isAbout
+                    ? 'absolute -left-[0.95rem] top-1.5 h-2 w-2 rounded-full bg-[#C9C9C9]'
+                    : 'absolute -left-[1.1rem] top-2 h-2 w-2 rounded-full bg-pink-500'
+                }
+              />
 
               <div className="mb-2">
-                <p className="font-semibold text-gray-900">{org}</p>
-                <a href={url} className="text-sm text-gray-500">{url}</a>
+                <p className={isAbout ? 'font-sans text-[18px] font-semibold text-black' : 'font-semibold text-gray-900'}>
+                  {org}
+                </p>
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={isAbout ? 'font-sans text-[14px] text-[#8E8E8E] underline' : 'text-sm text-gray-500'}
+                >
+                  {url}
+                </a>
               </div>
 
               <div className="mt-3 space-y-3">
@@ -90,19 +143,49 @@ const Experiences = () => {
                   const isOpen = openIndexes[key]
 
                   return (
-                    <div key={key} className="text-sm text-gray-800">
+                    <div key={key} className={isAbout ? 'font-sans text-[15px] text-black' : 'text-sm text-gray-800'}>
                       <button
                         onClick={() => toggle(key)}
-                        className="flex justify-between items-center w-full text-left group"
+                        className={
+                          isAbout
+                            ? 'group flex w-full items-center justify-between gap-4 text-left'
+                            : 'flex justify-between items-center w-full text-left group'
+                        }
                       >
-                        <span className="font-medium group-hover:text-pink-600 transition">{title}</span>
+                        <span
+                          className={
+                            isAbout
+                              ? `font-medium transition ${isOpen ? 'text-[#DC4F7C]' : 'text-black'} group-hover:text-[#DC4F7C]`
+                              : 'font-medium group-hover:text-pink-600 transition'
+                          }
+                        >
+                          {title}
+                        </span>
 
                         <div className="flex items-center gap-2">
-                        <span className="text-sm text-gray-500 group-hover:text-pink-600 transition whitespace-nowrap">{dates}</span>
+                        <span
+                          className={
+                            isAbout
+                              ? `whitespace-nowrap text-[14px] transition ${isOpen ? 'text-[#DC4F7C]' : 'text-[#8E8E8E]'} group-hover:text-[#DC4F7C]`
+                              : 'text-sm text-gray-500 group-hover:text-pink-600 transition whitespace-nowrap'
+                          }
+                        >
+                          {dates}
+                        </span>
                         {isOpen ? (
-                            <ChevronUp className="w-4 h-4 text-pink-600 transition" />
+                            <ChevronUp
+                              className={
+                                isAbout ? 'h-4 w-4 text-[#DC4F7C] transition' : 'w-4 h-4 text-pink-600 transition'
+                              }
+                            />
                             ) : (
-                            <ChevronDown className="w-4 h-4 text-gray-500 group-hover:text-pink-600 transition" />
+                            <ChevronDown
+                              className={
+                                isAbout
+                                  ? 'h-4 w-4 text-[#B5B5B5] transition group-hover:text-[#DC4F7C]'
+                                  : 'w-4 h-4 text-gray-500 group-hover:text-pink-600 transition'
+                              }
+                            />
                             )
                         }
 
@@ -114,7 +197,9 @@ const Experiences = () => {
                           isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                       >
-                        <p className="text-gray-600 leading-relaxed whitespace-pre-line">{description}</p>
+                        <p className={isAbout ? 'whitespace-pre-line pr-6 pt-1 text-[14px] leading-relaxed text-[#696969]' : 'text-gray-600 leading-relaxed whitespace-pre-line'}>
+                          {description}
+                        </p>
                       </div>
                     </div>
                   )

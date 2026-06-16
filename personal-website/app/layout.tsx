@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import AmbientBackground from "@/components/AmbientBackground";
+import CustomCursor from "@/components/CustomCursor";
+import SiteNav from "@/components/SiteNav";
+import { dmSans, libreBaskerville } from "@/lib/fonts";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -30,9 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${dmSans.variable} ${libreBaskerville.variable} ${geistMono.variable} relative min-h-screen font-sans antialiased text-black`}
       >
-        {children}
+        <CustomCursor />
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <AmbientBackground />
+          <SiteNav />
+          {children}
+        </div>
       </body>
     </html>
   );
