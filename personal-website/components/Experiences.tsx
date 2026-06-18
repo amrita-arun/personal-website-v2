@@ -10,9 +10,9 @@ const orgs = [
     url: 'https://www.tradeweb.com/',
     roles: [
       {
-        title: 'Incoming Fullstack SWE Intern',
-        dates: 'June 2026 → Aug 2026',
-        description: 'Incoming SWE Intern on Tradeweb\'s institutional team. Developing in Java/SpringBoot/React.js.',
+        title: 'Java Fullstack SWE Intern',
+        dates: 'June 2026 → Present',
+        description: 'Building distributed backend services for Tradeweb Direct\'s electronic trading platform, powering bond discovery, order management, and trade execution workflows.',
       },
     ],
   },
@@ -22,7 +22,7 @@ const orgs = [
     roles: [
       {
         title: 'SWE and Growth Intern',
-        dates: 'Jan 2025 → Present',
+        dates: 'Jan 2025 → Dec 2025',
         description: 'Architected and implemented a Dockerized in-browser terminal to execute python homework submissions.' +
         ' Automated image publishing to Amazon ECR, and on-demand ECS Fargate tasks to pull student submissions from S3, enabling distributed system-level sandboxing for code evaluation.' +
         '\n\nLaunched a 50+ participant pilot by conducting product demos and organic outreach to educators, including teachers from USC, UCLA, UCI, etc. accelerating adoption across K–12 and higher ed.'
@@ -36,7 +36,7 @@ const orgs = [
       {
         title: 'Director of External Community',
         dates: 'July 2025 → Present',
-        description: 'Making LavaLab a place that alumni continue to come back to.'
+        description: 'Community-building and organizing events, making LavaLab a place that alumni continue to come back to.'
       },
       {
         title: 'Co-Founder and Developer',
@@ -51,13 +51,13 @@ const orgs = [
     roles: [
       {
         title: 'Incubator Initiative Lead',
-        dates: 'Jan 2025 → Present',
-        description: 'Leading groups of members to create startups and passion projects of their design.'
+        dates: 'Jan 2025 → May 2026',
+        description: 'Led groups of members to create startups and passion projects of their design.'
       },
       {
         title: "Health Initiative",
-        dates: 'Sep 2024 → Present',
-        description: 'Currently building a productivity app to track what you have done, not what you need to do.'
+        dates: 'Sep 2024 → May 2025',
+        description: 'Built a productivity app to track what you have done, not what you need to do.'
       }
     ],
   },
