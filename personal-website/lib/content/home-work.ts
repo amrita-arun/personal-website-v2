@@ -33,7 +33,7 @@ export const homeWorkSlides: readonly HomeWorkSlide[] = [
     title: 'Wardrobe',
     subtitle: 'iOS mobile app',
     description:
-      'Outfit curation from scratch - Figma to full SwiftUI production. Smart, curated suggestions powered by you.',
+      'Outfit curation from scratch - Figma to full SwiftUI production. Smart, curated suggestions based on your preferences.',
     tags: ['SwiftUI', 'Figma', 'iOS', 'Interaction design'],
     imageSrc: '/wardrobe.png',
     imageAlt: 'Wardrobe iOS app mockup',
@@ -51,7 +51,7 @@ export const homeWorkSlides: readonly HomeWorkSlide[] = [
     tags: ['Swift', 'iOS', 'Interaction design'],
     imageSrc: '/swiftMotionKitTwitter.gif',
     imageAlt: 'SwiftMotionKit interaction demo',
-    codeHref: 'https://github.com/amrita-arun/CliqueSwift',
+    codeHref: 'https://github.com/amrita-arun/SwiftMotionKit',
     codeLabel: 'View Code',
     accentColor: '#F3842D',
     tagVariant: 'pink',
