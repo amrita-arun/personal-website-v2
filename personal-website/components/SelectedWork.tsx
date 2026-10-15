@@ -292,10 +292,11 @@ export default function SelectedWork() {
 
   return (
     <section
+      id="selected-work"
       ref={sectionRef}
       tabIndex={0}
       onKeyDown={handleKeyDown}
-      className="relative ml-auto mr-4 mt-16 w-full max-w-[1120px] overscroll-contain pb-20 outline-none md:mt-20 md:pb-28 lg:mt-24 lg:mr-14 lg:pl-6"
+      className="relative ml-auto mr-4 mt-16 w-full max-w-[1120px] scroll-mt-8 overscroll-contain pb-20 outline-none md:mt-20 md:pb-28 lg:mt-24 lg:mr-14 lg:pl-6"
       aria-label="Selected work"
     >
 

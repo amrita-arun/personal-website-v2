@@ -195,11 +195,32 @@ html.custom-cursor-active * {
   animation: lava-drift-4 24s ease-in-out infinite;
 }
 
+@keyframes scroll-nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll-nudge {
+  animation: scroll-nudge 1.8s ease-in-out infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .animate-lava-1,
   .animate-lava-2,
   .animate-lava-3,
   .animate-lava-4 {
     animation: none;
+  }
+
+  .animate-scroll-nudge {
+    animation: none;
+    opacity: 0.7;
   }
 }
