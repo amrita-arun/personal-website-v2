@@ -16,9 +16,9 @@ export default function FigmaFirstViewport() {
           </h1>
 
           <div className="mt-8 max-w-[620px] space-y-[25px] font-sans text-[16px] font-medium leading-[25px] text-[#DC4F7C]">
-            <p>i&apos;m a design engineer who builds interactions that feel delightful.</p>
+            <p>i&apos;m an iOS and backend engineer who builds products to solve everyday problems I see.</p>
             <p>
-              i study CS at the University of Southern California. my dev background allows me to
+              i study CS at the University of Southern California, graduating in december 2026. my dev background allows me to
               leverage AI and prototype quickly.
             </p>
           </div>

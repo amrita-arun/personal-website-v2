@@ -17,19 +17,6 @@ export type HomeWorkSlide = {
 
 export const homeWorkSlides: readonly HomeWorkSlide[] = [
   {
-    title: 'Verso',
-    subtitle: 'designathon · 3rd @ CreateSC',
-    description:
-      "A reading app concept that won 3rd place at USC's nationwide UIUX designathon. Built several production screens solo.",
-    tags: ['Figma', 'Prototyping', 'UI/UX', 'Product Thinking'],
-    imageSrc: '/verso.png',
-    imageAlt: 'Verso reading app mockup',
-    caseStudyHref: '/work/verso',
-    devpostHref: 'https://devpost.com/software/verso-ctf4e9',
-    accentColor: '#DC4F7C',
-    tagVariant: 'pink',
-  },
-  {
     title: 'Wardrobe',
     subtitle: 'iOS mobile app',
     description:
@@ -68,5 +55,18 @@ export const homeWorkSlides: readonly HomeWorkSlide[] = [
     codeLabel: 'View Code',
     accentColor: '#A1A645',
     tagVariant: 'orange',
+  },
+  {
+    title: 'Verso',
+    subtitle: 'designathon · 3rd @ CreateSC',
+    description:
+      "A reading app concept that won 3rd place at USC's nationwide UIUX designathon. Built several production screens solo.",
+    tags: ['Figma', 'Prototyping', 'UI/UX', 'Product Thinking'],
+    imageSrc: '/verso.png',
+    imageAlt: 'Verso reading app mockup',
+    caseStudyHref: '/work/verso',
+    devpostHref: 'https://devpost.com/software/verso-ctf4e9',
+    accentColor: '#DC4F7C',
+    tagVariant: 'pink',
   },
 ] as const

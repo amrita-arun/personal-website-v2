@@ -25,8 +25,7 @@ export default function AboutMe() {
             <p className="font-sans text-[16px] font-medium text-[#8E8E8E]">a little bit about me...</p>
             <div className="space-y-6 font-sans text-[16px] font-medium leading-[25px] text-[#DC4F7C]">
               <p>
-                i&apos;m a lifelong artist who loves bringing her ideas to life, whether that be through
-                design, physical media, or programming!
+                i&apos;m a lifelong artist and programmer who loves bringing her ideas to life!
               </p>
             </div>
           </div>

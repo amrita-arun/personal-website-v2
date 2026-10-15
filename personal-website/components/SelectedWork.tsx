@@ -131,7 +131,7 @@ function WorkSlideMedia({ slide }: { slide: HomeWorkSlide }) {
           fill
           className="object-contain object-center"
           sizes="(max-width: 1024px) 100vw, 630px"
-          priority={slide.title === 'Verso' || slide.title === 'Wardrobe'}
+          priority={slide.title === 'Wardrobe'}
           unoptimized={isGif || isRaster}
         />
       </div>
